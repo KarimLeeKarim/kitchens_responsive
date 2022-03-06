@@ -4,11 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      type="text/css"
+    />
     <link rel="stylesheet" href="./assets/style/style.css" />
     <title>MTC-project</title>
   </head>
   <body>
+    <section class="section-header">
+      <div class="container">
+        <nav class="mobile__menu">
+          <div class="mobile__menu__logo__btn">
+            <img src="./assets/image/mk.png" alt="mk" class="mobile__logo" />
+            <i class="fa fa-bars toggleBtn"></i>
+          </div>
+          <ul class="mobile__menu__list">
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Plan my kitchen</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li>
+              <a href="#"> My order </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="section-header__navbar">
+          <div class="navbar__leftSide">
+            <div class="leftSide__icons">
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-instagram"></i>
+            </div>
+            <p class="leftSide__text 1">Shop</p>
+            <p class="leftSide__text 2">Plan my kitchen</p>
+          </div>
+          <a class="navbar__image">
+            <img src="./assets//image/mk.png" alt="mk" class="img" />
+          </a>
+          <div class="navbar__rightSide">
+            <p class="rightSide__text 1">About us</p>
+            <p class="rightSide__text 2">Gallery</p>
+            <div class="rightSide__btn">
+              <button class="btn">
+                My order <i class="fa fa-trash-o"></i>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <p class="section-header__title">
+          Design and order your new kitchen online today
+        </p>
+        <h1 class="section-header__subtitle">
+          Bespoke & made to measure handmade kitchen design
+        </h1>
+        <div class="section-header__arrows">
+          <i class="fa fa-angle-left" onclick="minusSlide()"></i>
+          <i class="fa fa-angle-right" onclick="plusSlide()"></i>
+        </div>
+        <div class="section-header__btn">
+          <button class="btn">Order Now</button>
+        </div>
+      </div>
+    </section>
     <section class="section-quality">
       <img
         src="./assets/image/Bitmap1.png"
@@ -36,18 +95,33 @@
     <section class="section-customer">
       <div class="container">
         <p class="section-customer__title">What Our Customers Say</p>
-        <h1 class="section-customer__subtitle__title">
-          Over 35 years experience designing handmade kitchens
-        </h1>
-        <p class="section-customer__subtitle__text">
-          Since my first contact I have received a very high level of customer
-          service and advice with my kitchen plans. Ben responded very quickly
-          to all of my emails and delivery of the kitchen was as planned.
-        </p>
-        <p class="section-customer__subtitle__author">Jane, Dundee</p>
+        <div class="slider">
+          <div class="item">
+            <h1 class="section-customer__subtitle__title">
+              Over 35 years experience designing handmade kitchens
+            </h1>
+            <p class="section-customer__subtitle__text">
+              Since my first contact I have received a very high level of
+              customer service and advice with my kitchen plans. Ben responded
+              very quickly to all of my emails and delivery of the kitchen was
+              as planned.
+            </p>
+            <p class="section-customer__subtitle__author">Jane, Dundee</p>
+          </div>
+        </div>
+        <div class="item">
+          <h1 class="section-customer__subtitle__title">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+          </h1>
+          <p class="section-customer__subtitle__text">
+            doloremque tempore officiis doloribus dolorem repellendus nobis
+            debitis saepe quia tenetur quasi similique tempora.
+          </p>
+          <p class="section-customer__subtitle__author">Karim, Karimli</p>
+        </div>
         <div class="section-customer__arrows">
-            <i class="fa fa-angle-left"></i>
-            <i class="fa fa-angle-right"></i>
+          <i class="fa fa-angle-left" onclick="minusSlide()"></i>
+          <i class="fa fa-angle-right" onclick="plusSlide()"></i>
         </div>
         <div class="section-customer__btn">
           <button class="btn">Frequently Asked Questions</button>
@@ -121,12 +195,12 @@
           Copyright Online MTC Home Kitchens 2018 - All rights reserved. <br />
         </p>
         <p class="footer__copyright">
-           Responsive website design, Development & Hosting by mtc.
-          </p>
+          Responsive website design, Development & Hosting by mtc.
+        </p>
         <hr class="footer__line" />
       </div>
     </footer>
-    <!-- <script src="https://kit.fontawesome.com/ea39537173.js" crossorigin="anonymous"></script> -->
+
     <script src="./index.js"></script>
   </body>
 </html>
