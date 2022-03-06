@@ -30,14 +30,9 @@ function minusSlide() {
   showSlides((slideIndex -= 1));
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
 function showSlides(n) {
   let i;
-  let slides = document.getElementsByClassName("item");
-  //   var dots = document.getElementsByClassName("slider-dots_item");
+  let slides = document.getElementsByClassName("items");
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -47,9 +42,36 @@ function showSlides(n) {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  //   for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  //   }
   slides[slideIndex - 1].style.display = "block";
 }
-//   dots[slideIndex - 1].className += " active";
+
+
+
+// second slider
+let index = 1;
+showSlidesforSlider(index);
+
+function currentSlide(n) {
+  showSlidesforSlider((index = n));
+}
+
+function showSlidesforSlider(n) {
+  let i;
+  let slides = document.getElementsByClassName("section-header-item");
+    var dots = document.getElementsByClassName("slider-dots_item");
+  if (n > slides.length) {
+    index = 1;
+  }
+  if (n < 1) {
+    index = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[index - 1].style.display = "flex";
+  dots[index - 1].className += " active";
+
+}
