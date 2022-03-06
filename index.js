@@ -1,11 +1,21 @@
 //toggle menu
 let btn = document.querySelector(".toggleBtn");
+let list = document.querySelector(".mobile__menu__list");
 btn.addEventListener("click", function myFunction() {
-  let list = document.querySelector(".mobile__menu__list");
   btn.style.ro;
-  if (list.style.maxHeight === "190px") return (list.style.maxHeight = "0px");
+  if (list.style.maxHeight === "210px") return (list.style.maxHeight = "0px" ,list.style.padding = "0px");
   list.style.display = "flex";
-  list.style.maxHeight = "190px";
+  list.style.maxHeight = "210px";
+  list.style.padding = "20px";
+});
+
+//closing menu on scroll down automatic
+document.addEventListener("scroll", function (e) {
+  scrollPosition = window.scrollY;
+
+  if (scrollPosition > 0) {
+    return (list.style.maxHeight = "0px",list.style.padding = "0px");
+  }
 });
 
 //slider
